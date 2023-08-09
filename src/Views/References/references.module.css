@@ -1,4 +1,6 @@
-section {
+/* references.module.css */
+
+.section {
   color: gray;
   display: flex;
   flex-direction: column;
@@ -6,18 +8,18 @@ section {
   margin-top: 20px;
 }
 
-section p {
+.section p {
   font-size: medium;
-  margin: 0px;
+  margin: 0;
 }
 
-ul {
+.ul {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
   padding-inline-start: 0;
-  margin: 0px;
+  margin: 0;
 }
 
 .imageLists {

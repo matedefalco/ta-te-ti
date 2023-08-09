@@ -1,4 +1,4 @@
-import "./References.css";
+import styles from "./references.module.css";
 
 const imgUrls: string[] = [
   "https://cdn1.iconfinder.com/data/icons/programing-development-8/24/react_logo-512.png",
@@ -8,12 +8,12 @@ const imgUrls: string[] = [
 
 export default function References() {
   return (
-    <section>
+    <section className={styles.section}>
       <p>Made with:</p>
-      <ul>
+      <ul className={styles.ul}>
         {imgUrls.map((url, index) => (
-          <li key={index} className="imageLists">
-            <img alt={`Imagen ${index}`} src={url} />
+          <li key={index} className={styles.imageLists}>
+            <img alt={`Imagen ${index}`} src={url} className={styles.image} />
           </li>
         ))}
       </ul>
