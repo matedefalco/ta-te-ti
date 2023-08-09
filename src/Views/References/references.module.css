@@ -1,0 +1,41 @@
+/* references.module.css */
+
+.section {
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.section p {
+  font-size: medium;
+  margin: 0;
+}
+
+.ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  padding-inline-start: 0;
+  margin: 0;
+  margin-top: 8px;
+}
+
+.imageLists {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  width: 50px;
+  height: 50px;
+}
+
+.imageLists img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
