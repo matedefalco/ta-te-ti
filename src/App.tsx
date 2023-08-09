@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useScore } from "./ScoresContext";
 
 const WINNER_COMPS = [
   [0, 1, 2],
@@ -14,6 +15,8 @@ const WINNER_COMPS = [
 const GRID = Array.from(Array(9).keys());
 
 function App() {
+  const { updateScore } = useScore();
+
   const [player, setPlayer] = useState<"X" | "O">("X");
   const [plays, setPlays] = useState<Map<number, "X" | "O">>(new Map());
 
@@ -29,6 +32,7 @@ function App() {
     if (winner) {
       setTimeout(() => {
         alert(player + " wins!");
+        updateScore(player);
         setPlays(new Map());
       }, 100);
 
