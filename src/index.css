@@ -24,7 +24,7 @@ body {
 
 main {
   display: grid;
-  grid-template: repeat(3, 128px) / repeat(3, 128px);
+  grid-template: repeat(3, minmax(128px, 1fr)) / repeat(3, minmax(128px, 1fr));
   gap: 1em;
   padding: 1em;
   border-radius: 8px;
@@ -39,7 +39,7 @@ main > button {
   color: white;
   display: grid;
   place-content: center;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -60,6 +60,23 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.appBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .appBox {
+    padding: 2rem;
+    margin: 0 auto;
+  }
+
+  main {
+    grid-template: repeat(3, 90px) / repeat(3, 90px);
+  }
 }
 
 @media (prefers-color-scheme: light) {

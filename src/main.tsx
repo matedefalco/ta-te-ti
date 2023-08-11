@@ -9,9 +9,11 @@ import "./index.css";
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <ScoreProvider>
-      <Score />
-      <App />
-      <References />
+      <div className="appBox">
+        <Score />
+        <App />
+        <References />
+      </div>
     </ScoreProvider>
   </React.StrictMode>
 );
