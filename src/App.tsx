@@ -19,7 +19,7 @@ function App() {
 
   const [player, setPlayer] = useState<"X" | "O">("X");
   const [plays, setPlays] = useState<Map<number, "X" | "O">>(new Map());
-  const [isTie, setIsTie] = useState(false);
+  const [, setIsTie] = useState(false);
 
   function handleClick(cell: number) {
     if (plays.has(cell)) return;
