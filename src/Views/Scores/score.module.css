@@ -8,12 +8,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: black;
   border: 1px solid gray;
   border-radius: 16px;
   margin-bottom: 32px;
   margin-top: 32px;
   padding: 16px;
+  width: 100%;
 }
 
 .flex {
@@ -34,4 +36,18 @@
 
 .text {
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2;
+  }
+
+  .section {
+    width: 70%;
+  }
 }

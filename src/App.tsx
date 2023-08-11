@@ -19,6 +19,7 @@ function App() {
 
   const [player, setPlayer] = useState<"X" | "O">("X");
   const [plays, setPlays] = useState<Map<number, "X" | "O">>(new Map());
+  const [, setIsTie] = useState(false);
 
   function handleClick(cell: number) {
     if (plays.has(cell)) return;
@@ -34,6 +35,17 @@ function App() {
         alert(player + " wins!");
         updateScore(player);
         setPlays(new Map());
+      }, 100);
+
+      return;
+    }
+
+    if (Array.from(plays.values()).length + 1 === GRID.length) {
+      setTimeout(() => {
+        setIsTie(true);
+        alert("It's a tie!");
+        setPlays(new Map());
+        setIsTie(false);
       }, 100);
 
       return;
